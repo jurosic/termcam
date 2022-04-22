@@ -71,7 +71,7 @@ int main(int argc, char* argv[])
     Mat frame;
     VideoCapture cap;
      
-    int apiID = cv::CAP_ANY;    
+    int apiID = CAP_ANY;    
 
     if(cam){
         cap.open(deviceID, apiID);
