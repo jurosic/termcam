@@ -95,7 +95,7 @@ int main(int argc, char* argv[])
         cout << "\033[0;0H" << cvToString(frame, brt_chars);
 
         if(show){
-            imshow("gec", frame);
+            imshow("Cam", frame);
             if (waitKey(5) >= 0)
                 break;
         }
