@@ -16,15 +16,15 @@ using namespace std;
 string brt_chars = "$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\\|()1{}[]?-_+~<>i!lI;:,^`\'. ";
 //string brt_chars = ".:!";
 
-char* getCmdOption(char** begin, char** end, const std::string & option){
-    char ** itr = std::find(begin, end, option);
+char* getCmdOption(char** begin, char** end, const string & option){
+    char ** itr = find(begin, end, option);
     if (itr != end && ++itr != end){
         return *itr;
     }
     return 0;
-}bool cmdOptionExists(char** begin, char** end, const std::string& option)
+}bool cmdOptionExists(char** begin, char** end, const string& option)
 {
-    return std::find(begin, end, option) != end;
+    return find(begin, end, option) != end;
 }
 
 
@@ -99,7 +99,7 @@ int main(int argc, char* argv[])
             if (waitKey(5) >= 0)
                 break;
         }
-        std::this_thread::sleep_for(std::chrono::milliseconds(1000/fps));
+        this_thread::sleep_for(chrono::milliseconds(1000/fps));
     }
 
     return 0;
